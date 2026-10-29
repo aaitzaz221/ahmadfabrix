@@ -1,57 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop - Ahmad Fabrix</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#fff8f5}
-header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;box-shadow:0 2px 15px #0001;position:sticky;top:0;z-index:100}
-.logo{font-size:22px;font-weight:900;color:#8b2252}
-.logo span{color:#d61b60}
-nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-
-/* لیپ ٹاپ پر 4 کالم */
-.products{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;padding:15px 5%}
-.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 15px #0001;text-align:center;padding-bottom:15px}
-.card img{width:100%;height:380px;object-fit:cover;object-position:top center}
-.card h3{margin:10px 0 5px;font-size:15px}
-.price{color:#d61b60;font-weight:800;margin:8px 0}
-.btn{padding:7px 14px;border-radius:20px;border:1px solid #8b2252;background:#fff;color:#8b2252;cursor:pointer;font-size:13px;margin:3px}
-.btn-fill{background:#8b2252;color:#fff}
-
-/* موبائل پر 2 کالم */
-@media (max-width:768px){
-  .products{grid-template-columns:1fr 1fr !important;gap:10px;padding:10px 3%}
-  .card img{height:230px !important}
-  .card h3{font-size:13px !important}
-}
-</style>
-</head>
-<body>
-<header><div class="logo">Ahmad <span>Fabrix</span></div><nav><a href="index.html">Home</a> <a href="shop.html">Shop</a> <a href="login.html">Login</a></nav></header>
-
-<div class="products">
-<div class="card"><img src="pic1.jpg"><h3>Suit 1</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic2.jpg"><h3>Suit 2</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic3.jpg"><h3>Suit 3</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic4.jpg"><h3>Suit 4</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic5.jpg"><h3>Suit 5</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic6.jpg"><h3>Suit 6</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic7.jpg"><h3>Suit 7</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic8.jpg"><h3>Suit 8</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic9.jpg"><h3>Suit 9</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic10.jpg"><h3>Suit 10</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic11.jpg"><h3>Suit 11</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic12.jpg"><h3>Suit 12</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic13.jpg"><h3>Suit 13</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic14.jpg"><h3>Suit 14</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic15.jpg"><h3>Suit 15</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic16.jpg"><h3>Suit 16</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic17.jpg"><h3>Suit 17</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic18.jpg"><h3>Suit 18</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-</div>
-
-</body>
-</html>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial} body{background:#fff8f5}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;box-shadow:0 2px 15px #0001;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:900;color:#8b2252} .logo span{color:#d81b60}
+nav{display:flex;gap:18px} nav a{text-decoration:none;color:#333;font-weight:600} nav a.active{color:#8b2252;border-bottom:2px solid #8b2252}
+#cart-icon{background:#8b2252;color:white;padding:8px 16px;border-radius:20px;cursor:pointer}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px 5%}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 15px #0001;text-align:center;padding-bottom:15px;transition:.3s} .card:hover{transform:translateY(-5px)}
+.card img{width:100%;height:320px;object-fit:cover} .card p{color:#d81b60;font-weight:bold;margin:5px}
+.btns{display:flex;justify-content:center;gap:8px;margin-top:8px} .btn-cart{padding:8px 14px;border:1px solid #8b2252;background:#fff;color:#8b2252;border-radius:20px;cursor:pointer} .btn-buy{padding:8px 16px;background:#8b2252;color:#fff;border:none;border-radius:20px;cursor:pointer}
+#cart-box{position:fixed;top:0;right:-400px;width:360px;height:100%;background:#fff;box-shadow:-5px 0 15px #0002;transition:0.3s;padding:20px;z-index:200;overflow-y:auto} #cart-box.active{right:0}
+.footer{background:#1a1a2e;color:white;text-align:center;padding:20px;margin-top:30px}
+</style></head><body>
+<header><div class="logo">Ahmad <span>Fabrix</span></div>
+<nav><a href="index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="contact.html">Contact</a><a href="login.html">Login</a></nav>
+<div id="cart-icon" onclick="document.getElementById('cart-box').classList.add('active')">Cart 🛒 (<span id="cart-count">0</span>)</div></header>
+<h2 style="text-align:center;color:#8b2252;margin:25px 0">Our Complete Collection - 18 Premium Suits</h2>
+<div class="products" id="product-list"></div>
+<div id="cart-box"><h3>آپ کا کارٹ <span style="float:right;cursor:pointer" onclick="this.parentElement.parentElement.classList.remove('active')">X</span></h3><div id="cart-items"></div><hr><h4>Total: Rs. <span id="cart-total">0</span></h4><button onclick="checkout()" style="width:100%;padding:12px;background:#25D366;color:white;border:none;border-radius:25px;cursor:pointer;margin-top:10px;font-weight:bold">WhatsApp پر آرڈر کریں</button></div>
+<div class="footer">Free Delivery | JazzCash/Easypaisa 03275213308 | WhatsApp 03275213308</div>
+<script>
+let cart=[]; let whatsappNumber="923275213308";
+let fabrics=["Lawn","Chiffon","Cotton","Karandi"];
+let list=document.getElementById('product-list');
+for(let i=1;i<=18;i++){let fab=fabrics[i%4];let price=3200+i*50;
+list.innerHTML+=<div class="card"><img src="pic${i}.jpg" onerror="this.src='https://via.placeholder.com/400x500?text=Suit+${i}'"><h3>Premium ${fab} Suit ${i}</h3><small>Fabric: ${fab} - 3 Piece</small><p>Rs. ${price}</p><div class="btns"><button class="btn-cart" onclick="addToCart('Premium ${fab} Suit ${i}',${price})">Add to Cart</button><button class="btn-buy" onclick="buyNow('Premium ${fab} Suit ${i}',${price})">Shop Now</button></div></div>;}
+function addToCart(n,p){cart.push({name:n,price:p});updateCart();document.getElementById('cart-box').classList.add('active');}
+function buyNow(n,p){
+let userName=localStorage.getItem('af_name')||"New Customer"; let userEmail=localStorage.getItem('af_email')||"No Email";
+let m=*NEW ORDER - Ahmad Fabrix*%0ACustomer: ${userName}%0AEmail: ${userEmail}%0A%0AProduct: ${n} - Rs. ${p};window.open(https://wa.me/${whatsappNumber}?text=${m},'_blank');}
+function updateCart(){document.getElementById('cart-count').innerText=cart.length;let d=document.getElementById('cart-items');d.innerHTML="";let t=0;cart.forEach((it,i)=>{t+=it.price;d.innerHTML+=<p>${it.name} - Rs.${it.price} <span onclick="cart.splice(${i},1);updateCart()" style="color:red;cursor:pointer">[x]</span></p>;});document.getElementById('cart-total').innerText=t;}
+function checkout(){if(cart.length==0){alert("کارٹ خالی ہے");return;}let userName=localStorage.getItem('af_name')||"New Customer"; let userEmail=localStorage.getItem('af_email')||"No Email"; let msg=*NEW ORDER - Ahmad Fabrix*%0ACustomer: ${userName}%0AEmail: ${userEmail}%0A%0A;cart.forEach(it=>{msg+=- ${it.name} - Rs. ${it.price}%0A});msg+=%0ATotal: Rs. ${document.getElementById('cart-total').innerText};window.open(https://wa.me/${whatsappNumber}?text=${msg},'_blank');}
+</script>
+</body></html>
