@@ -11,26 +11,47 @@ header{background:#fff;display:flex;justify-content:space-between;align-items:ce
 .logo{font-size:22px;font-weight:900;color:#8b2252}
 .logo span{color:#d61b60}
 nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 5%}
+
+/* لیپ ٹاپ پر 4 کالم */
+.products{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;padding:15px 5%}
 .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 15px #0001;text-align:center;padding-bottom:15px}
-.card img{width:100%;height:300px;object-fit:cover}
-.card h3{margin:10px 0 5px;font-size:16px}
+.card img{width:100%;height:380px;object-fit:cover;object-position:top center}
+.card h3{margin:10px 0 5px;font-size:15px}
 .price{color:#d61b60;font-weight:800;margin:8px 0}
-.btn{padding:7px 14px;border-radius:20px;border:1px solid #8b2252;background:#fff;color:#8b2252;cursor:pointer}
+.btn{padding:7px 14px;border-radius:20px;border:1px solid #8b2252;background:#fff;color:#8b2252;cursor:pointer;font-size:13px;margin:3px}
 .btn-fill{background:#8b2252;color:#fff}
+
+/* موبائل پر 2 کالم */
 @media (max-width:768px){
-  .card img{height:190px !important}
+  .products{grid-template-columns:1fr 1fr !important;gap:10px;padding:10px 3%}
+  .card img{height:230px !important}
   .card h3{font-size:13px !important}
 }
 </style>
 </head>
 <body>
 <header><div class="logo">Ahmad <span>Fabrix</span></div><nav><a href="index.html">Home</a> <a href="shop.html">Shop</a> <a href="login.html">Login</a></nav></header>
+
 <div class="products">
 <div class="card"><img src="pic1.jpg"><h3>Suit 1</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 <div class="card"><img src="pic2.jpg"><h3>Suit 2</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 <div class="card"><img src="pic3.jpg"><h3>Suit 3</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 <div class="card"><img src="pic4.jpg"><h3>Suit 4</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic5.jpg"><h3>Suit 5</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic6.jpg"><h3>Suit 6</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic7.jpg"><h3>Suit 7</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic8.jpg"><h3>Suit 8</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic9.jpg"><h3>Suit 9</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic10.jpg"><h3>Suit 10</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic11.jpg"><h3>Suit 11</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic12.jpg"><h3>Suit 12</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic13.jpg"><h3>Suit 13</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic14.jpg"><h3>Suit 14</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic15.jpg"><h3>Suit 15</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic16.jpg"><h3>Suit 16</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic17.jpg"><h3>Suit 17</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
+<div class="card"><img src="pic18.jpg"><h3>Suit 18</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 </div>
+
 </body>
 </html>
