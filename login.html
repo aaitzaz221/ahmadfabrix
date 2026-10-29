@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login - Ahmad Fabrix</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial} body{background:#fff8f5}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;box-shadow:0 2px 15px #0001}
+.logo{font-size:28px;font-weight:900;color:#8b2252}.logo span{color:#d81b60}
+nav{display:flex;gap:18px} nav a{text-decoration:none;color:#333;font-weight:600} nav a.active{color:#8b2252;border-bottom:2px solid #8b2252}
+.hero-mini{background:linear-gradient(135deg,#8b2252,#d81b60);color:white;text-align:center;padding:40px 20px}
+.box{max-width:420px;margin:30px auto;background:#fff;padding:35px;border-radius:20px;box-shadow:0 8px 25px #0001;text-align:center}
+.box input{width:100%;padding:14px;margin:10px 0;border:1px solid #ccc;border-radius:12px;box-sizing:border-box}
+.btn{width:100%;padding:14px;border:none;border-radius:30px;cursor:pointer;font-weight:800;font-size:16px;margin-top:10px}
+.btn-login{background:#8b2252;color:white} .btn-google{background:#fff;border:1px solid #ddd;color:#333;display:flex;align-items:center;justify-content:center;gap:10px}
+.footer{background:#1a1a2e;color:white;text-align:center;padding:20px;margin-top:30px}
+</style></head><body>
+<header><div class="logo">Ahmad <span>Fabrix</span></div><nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="contact.html">Contact</a><a href="login.html" class="active">Login</a></nav></header>
+<div class="hero-mini"><h1>My Account</h1><p>ایک بار لاگ ان کریں، اگلی بار خود ہی لاگ ان رہیں گے</p></div>
+<div class="box">
+<h2 style="color:#8b2252">Gmail سے Login</h2>
+<p id="welcomeText" style="margin:10px 0;color:#666">بس اپنا نام اور Gmail لکھیں</p>
+<input type="text" id="name" placeholder="آپ کا نام">
+<input type="email" id="email" placeholder="اپنا Gmail - example@gmail.com">
+<button class="btn btn-login" onclick="saveLogin()">Login کریں</button>
+<div style="margin:20px 0;color:#aaa">--- یا ---</div>
+<button class="btn btn-google" onclick="googleLogin()"><img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20"> Gmail سے جاری رکھیں</button>
+<p id="status" style="margin-top:15px;color:green;font-weight:bold"></p>
+<button id="logoutBtn" style="display:none;margin-top:10px;background:none;border:none;color:red;cursor:pointer;font-weight:600" onclick="logout()">Logout کریں</button>
+</div>
+<div class="footer">Ahmad Fabrix - WhatsApp 03275213308</div>
+<script>
+let nInput=document.getElementById('name'), eInput=document.getElementById('email'), status=document.getElementById('status'), welcomeText=document.getElementById('welcomeText');
+let savedName=localStorage.getItem('af_name'), savedEmail=localStorage.getItem('af_email');
+if(savedName){welcomeText.innerHTML="خوش آمدید <b>"+savedName+"</b>!"; nInput.value=savedName; eInput.value=savedEmail; status.innerText="آپ لاگ ان ہیں: "+savedEmail; document.getElementById('logoutBtn').style.display="inline-block";}
+function saveLogin(){let name=nInput.value.trim(), email=eInput.value.trim(); if(name==""||email==""){alert("نام اور Gmail دونوں لکھیں");return;} if(!email.includes("@")){alert("صحیح Gmail لکھیں");return;} localStorage.setItem('af_name',name); localStorage.setItem('af_email',email); status.innerText="شکریہ "+name+"! لاگ ان ہو گیا۔"; document.getElementById('logoutBtn').style.display="inline-block"; setTimeout(()=>{window.location.href="shop.html";},1500);}
+function googleLogin(){let email=prompt("اپنا Gmail لکھیں:"); if(!email) return; let name=prompt("اپنا نام لکھیں:"); if(!name) return; localStorage.setItem('af_name',name); localStorage.setItem('af_email',email); status.innerText="Gmail سے لاگ ان: "+name; setTimeout(()=>{window.location.href="shop.html";},1000);}
+function logout(){localStorage.removeItem('af_name'); localStorage.removeItem('af_email'); status.innerText="لاگ آؤٹ ہو گئے"; nInput.value=""; eInput.value=""; document.getElementById('logoutBtn').style.display="none"; welcomeText.innerText="بس اپنا نام اور Gmail لکھیں";}
+</script>
+</body></html>

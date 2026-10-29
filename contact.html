@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact - Ahmad Fabrix</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial} body{background:#fff8f5}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;box-shadow:0 2px 15px #0001}
+.logo{font-size:28px;font-weight:900;color:#8b2252}.logo span{color:#d81b60}
+nav{display:flex;gap:18px} nav a{text-decoration:none;color:#333;font-weight:600} nav a.active{color:#8b2252;border-bottom:2px solid #8b2252}
+.hero-mini{background:linear-gradient(135deg,#8b2252,#d81b60);color:white;text-align:center;padding:50px 20px}
+.wrap{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:0 5%}
+@media(max-width:700px){.wrap{grid-template-columns:1fr}}
+.box{background:#fff;padding:30px;border-radius:18px;box-shadow:0 5px 20px #0001}
+.box input,.box textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:10px;box-sizing:border-box}
+.btn{width:100%;padding:13px;background:#25D366;color:white;border:none;border-radius:25px;cursor:pointer;font-weight:800;font-size:16px}
+.info-card{background:#fff8f5;padding:15px;border-radius:12px;margin:10px 0;border-left:4px solid #8b2252}
+.footer{background:#1a1a2e;color:white;text-align:center;padding:20px;margin-top:30px}
+</style></head><body>
+<header><div class="logo">Ahmad <span>Fabrix</span></div><nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="delivery.html">Delivery</a><a href="contact.html" class="active">Contact</a><a href="login.html">Login</a></nav></header>
+<div class="hero-mini"><h1>Contact Us</h1><p>کوئی سوال؟ ہم 24/7 WhatsApp پر موجود ہیں</p></div>
+<div class="wrap">
+<div class="box"><h2 style="color:#8b2252">Message بھیجیں</h2><p style="margin:10px 0">یہ سیدھا WhatsApp پر آئے گا</p>
+<input type="text" id="name" placeholder="آپ کا نام"><input type="text" id="phone" placeholder="فون نمبر"><textarea id="msg" rows="4" placeholder="اپنا پیغام لکھیں"></textarea>
+<button class="btn" onclick="sendContact()">WhatsApp پر بھیجیں 📲</button></div>
+<div class="box"><h2 style="color:#8b2252">ہم سے رابطہ</h2>
+<div class="info-card">📞 <b>WhatsApp / Call:</b><br>03275213308</div>
+<div class="info-card">📍 <b>Location:</b><br>Rawalpindi, Pakistan<br>پورے پاکستان میں ڈیلیوری</div>
+<div class="info-card">💳 <b>JazzCash / Easypaisa:</b><br>03275213308<br>Account: Ahmad Fabrix</div>
+<div class="info-card">⏰ <b>Timing:</b><br>صبح 9 سے رات 11 بجے تک</div>
+<a href="https://wa.me/923275213308" target="_blank" class="btn" style="display:block;text-align:center;text-decoration:none;background:#8b2252;margin-top:15px">Direct WhatsApp Chat</a>
+</div>
+</div>
+<div class="footer">Ahmad Fabrix - WhatsApp 03275213308</div>
+<script>let whatsappNumber="923275213308";function sendContact(){let n=document.getElementById('name').value;let p=document.getElementById('phone').value;let m=document.getElementById('msg').value;if(n==""||m==""){alert("نام اور پیغام لکھیں");return;}let text=`*Contact - Ahmad Fabrix*%0AName: ${n}%0APhone: ${p}%0AMessage: ${m}`;window.open(`https://wa.me/${whatsappNumber}?text=${text}`,'_blank');}</script>
+</body></html>
