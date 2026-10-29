@@ -11,20 +11,16 @@ header{background:#fff;display:flex;justify-content:space-between;align-items:ce
 .logo{font-size:22px;font-weight:900;color:#8b2252}
 .logo span{color:#d61b60}
 nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-.products{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;padding:20px 5%}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 5%}
 .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 15px #0001;text-align:center;padding-bottom:15px}
 .card img{width:100%;height:300px;object-fit:cover}
 .card h3{margin:10px 0 5px;font-size:16px}
 .price{color:#d61b60;font-weight:800;margin:8px 0}
 .btn{padding:7px 14px;border-radius:20px;border:1px solid #8b2252;background:#fff;color:#8b2252;cursor:pointer}
 .btn-fill{background:#8b2252;color:#fff}
-
-/* YE LINE MOBILE PAR 2 COLUMN KAREGI */
 @media (max-width:768px){
-  .products{grid-template-columns:1fr 1fr !important;gap:10px !important;padding:10px !important}
   .card img{height:190px !important}
   .card h3{font-size:13px !important}
-  .btn{font-size:11px !important;padding:5px 8px !important}
 }
 </style>
 </head>
@@ -35,12 +31,6 @@ nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
 <div class="card"><img src="pic2.jpg"><h3>Suit 2</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 <div class="card"><img src="pic3.jpg"><h3>Suit 3</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 <div class="card"><img src="pic4.jpg"><h3>Suit 4</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic5.jpg"><h3>Suit 5</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic6.jpg"><h3>Suit 6</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic7.jpg"><h3>Suit 7</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic8.jpg"><h3>Suit 8</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic9.jpg"><h3>Suit 9</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic18.jpg"><h3>Suit 10</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
 </div>
 </body>
 </html>
