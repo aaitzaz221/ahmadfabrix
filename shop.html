@@ -11,10 +11,8 @@ header{background:#fff;display:flex;justify-content:space-between;align-items:ce
 .logo{font-size:24px;font-weight:900;color:#4a0a2e}
 .logo span{color:#d61b60}
 nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:700;font-size:15px}
-.cart-btn{background:#7a184a;color:#fff;padding:8px 18px;border-radius:25px;display:inline-block;margin-top:8px;font-size:14px}
+.cart-btn{background:#7a184a;color:#fff;padding:8px 18px;border-radius:25px;cursor:pointer;font-size:14px}
 h2.title{text-align:center;color:#7a184a;margin:25px 0 10px;font-size:26px}
-
-/* لیپ ٹاپ / پی سی پر 4 کالم */
 .products{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;padding:15px 5%}
 .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 15px #0001;text-align:center;padding-bottom:14px;border:1px solid #f0e0e8}
 .card img{width:100%;height:360px;object-fit:cover;object-position:top center;display:block}
@@ -22,12 +20,9 @@ h2.title{text-align:center;color:#7a184a;margin:25px 0 10px;font-size:26px}
 .price{color:#d61b60;font-weight:800;margin:6px 0;font-size:15px}
 .btn{padding:6px 12px;border-radius:20px;border:1px solid #7a184a;background:#fff;color:#7a184a;cursor:pointer;font-size:12px;margin:3px}
 .btn-fill{background:#7a184a;color:#fff}
-
-/* موبائل پر 2 کالم */
 @media (max-width:768px){
   .products{grid-template-columns:1fr 1fr !important;gap:10px;padding:10px 3%}
   .card img{height:230px !important}
-  h2.title{font-size:22px}
 }
 </style>
 </head>
@@ -42,33 +37,69 @@ h2.title{text-align:center;color:#7a184a;margin:25px 0 10px;font-size:26px}
 <a href="delivery.html">Delivery</a>
 <a href="contact.html">Contact</a>
 </nav>
-<div class="cart-btn">Cart 🛒 (0)</div>
+<div class="cart-btn" onclick="openCart()">Cart 🛒 (<span id="cartCount">0</span>)</div>
 </header>
 
 <h2 class="title">Our Complete Collection - 18 Premium Suits</h2>
 
-<div class="products">
-<div class="card"><img src="pic1.jpg"><h3>Premium Suit 1</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic2.jpg"><h3>Premium Suit 2</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic3.jpg"><h3>Premium Suit 3</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic4.jpg"><h3>Premium Suit 4</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic5.jpg"><h3>Premium Suit 5</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic6.jpg"><h3>Premium Suit 6</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic7.jpg"><h3>Premium Suit 7</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic8.jpg"><h3>Premium Suit 8</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic9.jpg"><h3>Premium Suit 9</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic10.jpg"><h3>Premium Suit 10</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic11.jpg"><h3>Premium Suit 11</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic12.jpg"><h3>Premium Suit 12</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic13.jpg"><h3>Premium Suit 13</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic14.jpg"><h3>Premium Suit 14</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic15.jpg"><h3>Premium Suit 15</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic16.jpg"><h3>Premium Suit 16</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic17.jpg"><h3>Premium Suit 17</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-<div class="card"><img src="pic18.jpg"><h3>Premium Suit 18</h3><div class="price">Rs. 3250</div><button class="btn">Add to Cart</button> <button class="btn btn-fill">Shop Now</button></div>
-</div>
+<div class="products" id="productList"></div>
 
 <div style="background:#0f0f2d;color:#fff;text-align:center;padding:15px;margin-top:20px;font-size:14px">Free Delivery | JazzCash/Easypaisa 03275213308 | WhatsApp 03275213308</div>
+
+<script>
+// 18 Products
+let products = [];
+for(let i=1;i<=18;i++){
+  products.push({id:i, name:`Premium Suit ${i}`, price:3250, img:`pic${i}.jpg`});
+}
+
+let cart = JSON.parse(localStorage.getItem('ahmadCart') || '[]');
+updateCartCount();
+
+function renderProducts(){
+  let html = '';
+  products.forEach(p=>{
+    html += `<div class="card">
+      <img src="${p.img}" onerror="this.src='pic1.jpg'">
+      <h3>${p.name}</h3>
+      <div class="price">Rs. ${p.price}</div>
+      <button class="btn" onclick="addToCart(${p.id})">Add to Cart</button>
+      <button class="btn btn-fill" onclick="shopNow(${p.id})">Shop Now</button>
+    </div>`;
+  });
+  document.getElementById('productList').innerHTML = html;
+}
+renderProducts();
+
+function addToCart(id){
+  let item = products.find(p=>p.id===id);
+  cart.push(item);
+  localStorage.setItem('ahmadCart', JSON.stringify(cart));
+  updateCartCount();
+  alert(item.name + " Cart me add ho gaya!");
+}
+
+function updateCartCount(){
+  document.getElementById('cartCount').innerText = cart.length;
+}
+
+function shopNow(id){
+  let item = products.find(p=>p.id===id);
+  let msg = `Assalam o Alaikum Ahmad Fabrix! Mujhe ${item.name} chahiye. Price Rs. ${item.price}. Image: ${item.img}`;
+  let wa = `https://wa.me/923275213308?text=${encodeURIComponent(msg)}`;
+  window.open(wa, '_blank');
+}
+
+function openCart(){
+  if(cart.length===0){ alert("Cart khali hai! Pehle Add to Cart karein."); return; }
+  let list = cart.map(c=>c.name).join('\n');
+  let total = cart.length * 3250;
+  if(confirm(list + "\n\nTotal: Rs. "+total+"\n\nWhatsApp par order bhejna hai?")){
+    let msg = `Order: \n${list}\nTotal Rs. ${total}`;
+    window.open(`https://wa.me/923275213308?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+}
+</script>
 
 </body>
 </html>
