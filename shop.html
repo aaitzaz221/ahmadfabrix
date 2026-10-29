@@ -15,11 +15,15 @@ nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:700;font-size:15
 h2.title{text-align:center;color:#7a184a;margin:25px 0 10px;font-size:26px}
 .products{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;padding:15px 5%}
 .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 15px #0001;text-align:center;padding-bottom:14px;border:1px solid #f0e0e8}
-.card img{width:100%;height:360px;object-fit:cover;object-position:top center;display:block}
+.card img{width:100%;height:360px;object-fit:cover;object-position:top center;display:block;cursor:zoom-in}
 .card h3{margin:10px 0 4px;font-size:15px;color:#333}
 .price{color:#d61b60;font-weight:800;margin:6px 0;font-size:15px}
 .btn{padding:6px 12px;border-radius:20px;border:1px solid #7a184a;background:#fff;color:#7a184a;cursor:pointer;font-size:12px;margin:3px}
 .btn-fill{background:#7a184a;color:#fff}
+/* Tasveer Badi Karne Wala Style */
+#imgModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;justify-content:center;align-items:center;padding:20px}
+#imgModal img{max-width:95%;max-height:95%;border-radius:12px;box-shadow:0 0 20px #fff3}
+#imgModal span{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;cursor:pointer;font-weight:900}
 @media (max-width:768px){
   .products{grid-template-columns:1fr 1fr !important;gap:10px;padding:10px 3%}
   .card img{height:230px !important}
@@ -46,13 +50,16 @@ h2.title{text-align:center;color:#7a184a;margin:25px 0 10px;font-size:26px}
 
 <div style="background:#0f0f2d;color:#fff;text-align:center;padding:15px;margin-top:20px;font-size:14px">Free Delivery | JazzCash/Easypaisa 03275213308 | WhatsApp 03275213308</div>
 
+<div id="imgModal" onclick="closeImg()">
+<span onclick="closeImg()">&times;</span>
+<img id="modalImg" src="">
+</div>
+
 <script>
-// 18 Products
 let products = [];
 for(let i=1;i<=18;i++){
   products.push({id:i, name:`Premium Suit ${i}`, price:3250, img:`pic${i}.jpg`});
 }
-
 let cart = JSON.parse(localStorage.getItem('ahmadCart') || '[]');
 updateCartCount();
 
@@ -60,7 +67,7 @@ function renderProducts(){
   let html = '';
   products.forEach(p=>{
     html += `<div class="card">
-      <img src="${p.img}" onerror="this.src='pic1.jpg'">
+      <img src="${p.img}" onclick="openImg('${p.img}')" onerror="this.src='pic1.jpg'">
       <h3>${p.name}</h3>
       <div class="price">Rs. ${p.price}</div>
       <button class="btn" onclick="addToCart(${p.id})">Add to Cart</button>
@@ -78,18 +85,14 @@ function addToCart(id){
   updateCartCount();
   alert(item.name + " Cart me add ho gaya!");
 }
-
 function updateCartCount(){
   document.getElementById('cartCount').innerText = cart.length;
 }
-
 function shopNow(id){
   let item = products.find(p=>p.id===id);
-  let msg = `Assalam o Alaikum Ahmad Fabrix! Mujhe ${item.name} chahiye. Price Rs. ${item.price}. Image: ${item.img}`;
-  let wa = `https://wa.me/923275213308?text=${encodeURIComponent(msg)}`;
-  window.open(wa, '_blank');
+  let msg = `Assalam o Alaikum Ahmad Fabrix! Mujhe ${item.name} chahiye. Price Rs. ${item.price}.`;
+  window.open(`https://wa.me/923275213308?text=${encodeURIComponent(msg)}`, '_blank');
 }
-
 function openCart(){
   if(cart.length===0){ alert("Cart khali hai! Pehle Add to Cart karein."); return; }
   let list = cart.map(c=>c.name).join('\n');
@@ -98,6 +101,13 @@ function openCart(){
     let msg = `Order: \n${list}\nTotal Rs. ${total}`;
     window.open(`https://wa.me/923275213308?text=${encodeURIComponent(msg)}`, '_blank');
   }
+}
+function openImg(src){
+  document.getElementById('modalImg').src = src;
+  document.getElementById('imgModal').style.display = 'flex';
+}
+function closeImg(){
+  document.getElementById('imgModal').style.display = 'none';
 }
 </script>
 
